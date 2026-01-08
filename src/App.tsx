@@ -1,8 +1,12 @@
+import "./styles/global.css";
+import "./styles/theme.css";
+import { Heading } from "./components/Heading";
+
 export function App() {
   console.log("App component rendered");
   return (
     <div>
-      <h1>Projeto Chronos Pomodoro!</h1>
+      <Heading />
       <p>Tá na hora de se dedicar para valer meu véioooo</p>
       <p>
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio, alias

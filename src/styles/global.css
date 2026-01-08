@@ -1,0 +1,10 @@
+body {
+  background-color: rgb(60, 77, 93);
+  color: white;
+}
+
+h1 {
+  color: var(--primary-color);
+  font-family: monospace;
+  font-size: 60px;
+}
