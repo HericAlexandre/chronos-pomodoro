@@ -1,5 +1,5 @@
 import styles from "./Heading.module.css";
 
-export function Heading() {
-  return <h1 className={styles.heading}>Projeto Chronos Pomodoro! 🍅⏲️</h1>;
+export function Heading(props) {
+  return <h1 className={styles.heading}>{props.children}</h1>;
 }
