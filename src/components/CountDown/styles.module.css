@@ -10,4 +10,5 @@
 .container:hover {
   filter: drop-shadow(0 0 1rem rgb(104, 53, 118))
     drop-shadow(0 0 1.5rem rgb(42, 152, 247));
+  transform: scale(1.1);
 }

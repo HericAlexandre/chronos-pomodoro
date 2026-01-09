@@ -24,7 +24,8 @@
 
 .logoLink:hover {
   color: var(--gray-100);
-  font-size: 4.4rem;
+  transform: scale(1.2);
+  transform-origin: center;
   filter: drop-shadow(0 0 1rem rgb(104, 53, 118))
     drop-shadow(0 0 1.5rem rgb(42, 152, 247));
 }
@@ -38,6 +39,6 @@
 }
 
 .logoLink:hover svg {
-  height: 7rem;
+  scale: 1.1;
   transform: rotate(360deg);
 }
