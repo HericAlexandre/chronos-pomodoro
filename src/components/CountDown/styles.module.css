@@ -1,0 +1,13 @@
+.container {
+  font-size: clamp(6rem, 20vw, 16rem);
+  font-weight: 700;
+  font-family: monospace;
+  text-align: center;
+  margin: 4rem;
+  transition: all 0.35s ease-in-out;
+}
+
+.container:hover {
+  filter: drop-shadow(0 0 1rem rgb(104, 53, 118))
+    drop-shadow(0 0 1.5rem rgb(42, 152, 247));
+}
