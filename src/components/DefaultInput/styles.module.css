@@ -1,0 +1,55 @@
+label {
+  padding-bottom: 1.2rem;
+}
+
+input {
+  border: none;
+}
+
+.inputPadrao {
+  background-color: transparent;
+  color: var(--text-default);
+  width: 32rem;
+  padding: 1.2rem;
+  border-bottom: 0.2rem solid var(--text-default);
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+  font-weight: 600;
+  font-family: monospace;
+}
+
+.inputPadrao::placeholder {
+  text-align: center;
+  color: var(--gray-600);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.field:hover,
+.field:focus-within {
+  filter: drop-shadow(0 0 1rem rgb(104, 53, 118))
+    drop-shadow(0 0 2rem rgb(42, 152, 247));
+}
+
+.field:has(.inputPadrao:invalid) .inputPadrao:focus {
+  border-color: red;
+  outline: none;
+}
+
+.inputPadrao:focus {
+  padding: 2rem;
+  border: 0.4rem solid var(--primary);
+  outline: none;
+  border-radius: 0.8rem;
+}
+
+.inputPadrao:disabled {
+  background-color: var(--gray-800);
+  border-color: var(--disabled);
+  color: var(--text-disabled);
+  cursor: not-allowed;
+}
