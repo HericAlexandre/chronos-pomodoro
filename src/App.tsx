@@ -33,8 +33,6 @@ export function App() {
             <p>Lorem ipsum dolor sit amet</p>
           </div>
           <div className="formRow">
-            <p>CICLOS</p>
-            <p>O O O O O O O O</p>
           </div>
           <div className="formRow">
             <button type="submit">Começar</button>
