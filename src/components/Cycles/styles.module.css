@@ -1,0 +1,98 @@
+@keyframes pulsarVerde {
+  0% {
+    filter: drop-shadow(0 0 1rem rgb(2, 67, 64))
+      drop-shadow(0 0 2rem rgb(56, 241, 139));
+  }
+  50% {
+    filter: drop-shadow(0 0 2rem rgb(56, 241, 139))
+      drop-shadow(0 0 4rem rgb(2, 67, 64));
+  }
+  100% {
+    filter: drop-shadow(0 0 1rem rgb(2, 67, 64))
+      drop-shadow(0 0 2rem rgb(56, 241, 139));
+  }
+}
+
+@keyframes pulsarAmarelo {
+  0% {
+    filter: drop-shadow(0 0 1rem rgb(79, 93, 0))
+      drop-shadow(0 0 2rem rgb(240, 255, 80));
+  }
+  50% {
+    filter: drop-shadow(0 0 2rem rgb(79, 93, 0))
+      drop-shadow(0 0 4rem rgb(240, 255, 80));
+  }
+  100% {
+    filter: drop-shadow(0 0 1rem rgb(79, 93, 0))
+      drop-shadow(0 0 2rem rgb(240, 255, 80));
+  }
+}
+
+@keyframes pulsarAzul {
+  0% {
+    filter: drop-shadow(0 0 1rem rgb(0, 42, 79))
+      drop-shadow(0 0 2rem rgb(80, 200, 255));
+  }
+  50% {
+    filter: drop-shadow(0 0 2rem rgb(0, 42, 79))
+      drop-shadow(0 0 4rem rgb(80, 200, 255));
+  }
+  100% {
+    filter: drop-shadow(0 0 1rem rgb(0, 42, 79))
+      drop-shadow(0 0 2rem rgb(80, 200, 255));
+  }
+}
+
+.cycles:hover .titulo {
+  filter: drop-shadow(0 0 1rem rgb(104, 53, 118))
+    drop-shadow(0 0 2rem rgb(42, 152, 247));
+}
+
+.cycles {
+  color: white;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+
+.cyclesDotsContainer {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.cyclesDots {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+}
+
+.working {
+  background-color: var(--primary);
+  transition: all 0.15s ease-in-out;
+}
+
+.working:hover {
+  animation: pulsarVerde 1.5s infinite alternate-reverse;
+  transform: scale(1.2);
+}
+
+.onBreak {
+  background-color: var(--warning);
+  transition: all 0.15s ease-in-out;
+}
+
+.onBreak:hover {
+  animation: pulsarAmarelo 1.5s infinite alternate-reverse;
+  transform: scale(1.2);
+}
+
+.onLongBreak {
+  background-color: var(--info);
+  transition: all 0.15s ease-in-out;
+}
+
+.onLongBreak:hover {
+  animation: pulsarAzul 1.5s infinite alternate-reverse;
+  transform: scale(1.2);
+}
