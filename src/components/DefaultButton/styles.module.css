@@ -1,0 +1,29 @@
+.button {
+  margin-top: 3rem;
+  width: 33%;
+  height: 4rem;
+  background-color: var(--primary);
+  color: var(--text-default);
+  border: none;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  transition: all 0.15s ease-in;
+  box-shadow: 0 1rem #226fa2;
+}
+
+.button:hover {
+  color: var(--primary);
+  background-color: var(--text-default);
+  filter: drop-shadow(0 0 1rem rgb(104, 53, 118))
+    drop-shadow(0 0 4rem rgb(42, 165, 247));
+}
+
+.button:active {
+  box-shadow: 0 0.4rem #70b4e1, inset 0 0.2rem 0.4rem rgba(22, 142, 148, 0.5);
+  transform: translateY(1.2rem);
+}
+
+.red {
+  background-color: var(--error);
+  box-shadow: 0 1rem #5d1594;
+}
