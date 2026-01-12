@@ -28,26 +28,28 @@
 }
 
 .menuLink:hover {
-  color: var(--primary);
-  background-color: var(--gray-100);
-  filter: drop-shadow(0 0 10px rgb(104, 53, 118))
-    drop-shadow(0 0 2rem rgb(42, 152, 247));
+  color: var(--luz-e-sombra);
+  background-color: var(--luz-e-sombra-fundo);
+  filter: drop-shadow(0 0 1rem var(--luzsombra-da-borda-um))
+    drop-shadow(0 0 2rem var(--luzsombra-da-borda-dois));
   transform-origin: center;
   transform: scale(1.2);
 }
 
 .menuLink:active {
-  color: var(--primary);
-  background-color: var(--text-default);
+  color: var(--luz-e-sombra);
+  background-color: var(--luz-e-sombra-fundo);
   transform: scale(1.2) translateY(1rem);
   box-shadow: 0 0.5rem #226fa2;
 }
 
-.menu a:nth-child(2) svg, .menu a:nth-child(3) svg {
-  transition: transform 0.5s ease; 
+.menu a:nth-child(2) svg,
+.menu a:nth-child(3) svg {
+  transition: transform 0.5s ease;
 }
 
-.menu a:nth-child(2):active svg, .menu a:nth-child(3):hover svg {
-  transform:  rotate(-360deg);
+.menu a:nth-child(2):active svg,
+.menu a:nth-child(3):hover svg {
+  transform: rotate(-360deg);
   transform-origin: center;
 }

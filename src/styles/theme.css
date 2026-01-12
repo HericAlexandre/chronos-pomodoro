@@ -35,4 +35,33 @@
 
   --disabled: #555f7d;
   --text-disabled: #aab3cc;
+
+  --luz-e-sombra: #0da170;
+  --luz-e-sombra-fundo: #e6e9f0;
+  --luzsombra-da-borda-um: rgb(104, 53, 118);
+  --luzsombra-da-borda-dois: rgb(42, 152, 247);
+}
+
+:root[data-theme='light'] {
+  --gray-100: #0a0f1a;
+  --gray-200: #181f2e;
+  --gray-300: #272f43;
+  --gray-400: #363d56;
+  --gray-500: #454f6a;
+  --gray-600: #555f7d;
+  --gray-700: #aab3cc;
+  --gray-800: #cdd3e1;
+  --gray-900: #e6e9f0;
+
+  --text-default: #0a0f1a;
+  --text-muted: #272f43;
+
+  --link-color: #0b8a60;
+  --link-hover: #065f46;
+
+  --luz-e-sombra: #e6e9f0;
+  --luz-e-sombra-fundo: #0da170;
+
+  --luzsombra-da-borda-um: #aab3cc;
+  --luzsombra-da-borda-dois: #aab3cc;
 }

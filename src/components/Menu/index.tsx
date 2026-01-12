@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from 'react';
 import {
   HistoryIcon,
   HouseIcon,
@@ -6,19 +6,50 @@ import {
   SettingsIcon,
   SunIcon,
   MoonIcon,
-} from "lucide-react";
-import styles from "./styles.module.css";
+} from 'lucide-react';
+import styles from './styles.module.css';
+
+type AvailableThemes = 'dark' | 'light';
 
 export function Menu() {
+  const [theme, setTheme] = useState<AvailableThemes>(() => {
+    const savedTheme = localStorage.getItem('theme') as
+      | AvailableThemes
+      | 'dark';
+    return savedTheme ?? 'dark';
+  });
+
+  const nextThemeIcon = {
+    dark: <SunIcon />,
+    light: <MoonIcon />,
+  };
+
   const [houseActive, setHouseActive] = useState(false);
-  const [lightMode, setLightMode] = useState(false);
+
+  function handleChangeTheme(
+    event: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
+  ) {
+    event.preventDefault();
+    setTheme(prevTheme => (prevTheme === 'dark' ? 'light' : 'dark'));
+  }
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+
+    return () => {
+      console.log('Função de cleanup do useEffect do tema foi executada!');
+    };
+  }, [theme]);
 
   return (
     <nav className={styles.menu}>
       <a
         className={styles.menuLink}
-        href="#"
-        onClick={(e) => {
+        href='#'
+        aria-label='Ir para a página inicial'
+        title='Home'
+        onClick={e => {
           e.preventDefault();
           setHouseActive(!houseActive);
         }}
@@ -26,22 +57,32 @@ export function Menu() {
         {houseActive ? <HouseHeartIcon /> : <HouseIcon />}
       </a>
 
-      <a className={styles.menuLink} href="#">
+      <a
+        className={styles.menuLink}
+        href='#'
+        aria-label='Ir para o histórico'
+        title='Histórico'
+      >
         <HistoryIcon />
       </a>
-      <a className={styles.menuLink} href="#">
+
+      <a
+        className={styles.menuLink}
+        href='#'
+        aria-label='Ir para as configurações'
+        title='Configurações'
+      >
         <SettingsIcon />
       </a>
 
       <a
         className={styles.menuLink}
-        href="#"
-        onClick={(e) => {
-          e.preventDefault();
-          setLightMode(!lightMode);
-        }}
+        href='#'
+        aria-label='Mudar o tema'
+        title='Tema'
+        onClick={handleChangeTheme}
       >
-        {lightMode ? <SunIcon /> : <MoonIcon />}
+        {nextThemeIcon[theme]}
       </a>
     </nav>
   );

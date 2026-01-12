@@ -8,7 +8,7 @@
 }
 
 .container:hover {
-  filter: drop-shadow(0 0 1rem rgb(104, 53, 118))
-    drop-shadow(0 0 1.5rem rgb(42, 152, 247));
+  filter: drop-shadow(0 0 1rem var(--luzsombra-da-borda-um))
+    drop-shadow(0 0 1.5rem var(--luzsombra-da-borda-dois));
   transform: scale(1.1);
 }

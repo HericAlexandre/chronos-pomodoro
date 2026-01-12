@@ -44,8 +44,8 @@
 }
 
 .cycles:hover .titulo {
-  filter: drop-shadow(0 0 1rem rgb(104, 53, 118))
-    drop-shadow(0 0 2rem rgb(42, 152, 247));
+  filter: drop-shadow(0 0 1rem var(--luzsombra-da-borda-um))
+    drop-shadow(0 0 2rem var(--luzsombra-da-borda-dois));
 }
 
 .cycles {

@@ -12,15 +12,16 @@
 }
 
 .button:hover {
-  color: var(--primary);
-  background-color: var(--text-default);
-  filter: drop-shadow(0 0 1rem rgb(104, 53, 118))
-    drop-shadow(0 0 4rem rgb(42, 165, 247));
+  color: var(--luz-e-sombra);
+  background-color: var(--luz-e-sombra-fundo);
+  filter: drop-shadow(0 0 1rem var(--luzsombra-da-borda-um))
+    drop-shadow(0 0 4rem var(--luzsombra-da-borda-dois));
   transform: scale(1.2);
+  box-shadow: 0 1rem #226fa2;
 }
 
 .button:active {
-  box-shadow: 0 0.4rem #70b4e1, inset 0 0.2rem 0.4rem rgba(22, 142, 148, 0.5);
+  box-shadow: 0 0.4rem #226fa2, inset 0 0.2rem 0.4rem rgba(22, 142, 148, 0.5);
   transform: translateY(1.2rem) scale(1.2);
 }
 
