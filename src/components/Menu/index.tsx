@@ -36,10 +36,6 @@ export function Menu() {
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
     localStorage.setItem('theme', theme);
-
-    return () => {
-      console.log('Função de cleanup do useEffect do tema foi executada!');
-    };
   }, [theme]);
 
   return (
