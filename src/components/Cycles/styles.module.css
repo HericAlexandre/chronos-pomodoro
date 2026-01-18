@@ -43,6 +43,18 @@
   }
 }
 
+@keyframes popIn {
+  0% {
+    transform: scale(1);
+  }
+  80% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 .cycles:hover .titulo {
   filter: drop-shadow(0 0 1rem var(--luzsombra-da-borda-um))
     drop-shadow(0 0 2rem var(--luzsombra-da-borda-dois));
@@ -53,6 +65,12 @@
   color: var(--text-default);
   font-weight: bold;
   transition: all 0.3s ease-in-out;
+}
+
+.newCycle {
+  animation: popIn 0.4s ease-out forwards;
+  transition: all 0.3s ease-in-out;
+  animation-iteration-count: 1;
 }
 
 .cyclesDotsContainer {
@@ -68,32 +86,32 @@
   border-radius: 50%;
 }
 
-.working {
+.workTime {
   background-color: var(--primary);
   transition: all 0.15s ease-in-out;
 }
 
-.working:hover {
+.workTime:hover {
   animation: pulsarVerde 1.5s infinite alternate-reverse;
   transform: scale(1.2);
 }
 
-.onBreak {
+.shortBreakTime {
   background-color: var(--warning);
   transition: all 0.15s ease-in-out;
 }
 
-.onBreak:hover {
+.shortBreakTime:hover {
   animation: pulsarAmarelo 1.5s infinite alternate-reverse;
   transform: scale(1.2);
 }
 
-.onLongBreak {
+.longBreakTime {
   background-color: var(--info);
   transition: all 0.15s ease-in-out;
 }
 
-.onLongBreak:hover {
+.longBreakTime:hover {
   animation: pulsarAzul 1.5s infinite alternate-reverse;
   transform: scale(1.2);
 }

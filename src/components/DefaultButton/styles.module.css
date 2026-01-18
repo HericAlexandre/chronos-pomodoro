@@ -3,7 +3,7 @@
   width: 33%;
   height: 4rem;
   background-color: var(--primary);
-  color: var(--text-default);
+  color: var(--gray-900);
   border: none;
   border-radius: 0.8rem;
   cursor: pointer;
@@ -27,5 +27,12 @@
 
 .red {
   background-color: var(--error);
-  box-shadow: 0 1rem #5d1594;
+  color: var(--gray-900);
+  box-shadow: 0 1rem #691443;
+}
+
+.red:hover {
+  background-color: rgb(208, 87, 87);
+  color: var(--gray-900);
+  box-shadow: 0 1rem #833661;
 }
