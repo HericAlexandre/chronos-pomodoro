@@ -8,6 +8,7 @@ import { TaskActionTypes } from '../../contexts/TaskContext/taskActions';
 import { useTaskContext } from '../../contexts/TaskContext/useTaskContex';
 import type { TaskModel } from '../../models/TaskModel';
 import { PauseIcon, PlayIcon } from 'lucide-react';
+import { Tips } from '../Tips';
 
 export function MainForm() {
   const { state, dispatch } = useTaskContext();
@@ -65,7 +66,7 @@ export function MainForm() {
       </div>
 
       <div className='formRow'>
-        <p>O próximo intervalo é de: </p>
+          <Tips />
       </div>
 
       {state.currentCycle > 0 && (
