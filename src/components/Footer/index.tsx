@@ -1,12 +1,14 @@
 import { FolderGit2Icon } from 'lucide-react';
 import styles from './styles.module.css';
+import { Link } from 'react-router';
 
 export function Footer() {
   return (
     <footer className={styles.footerContainer}>
-      <a className={`${styles.footerContent} ${styles.linkPomodoro}`} href='#'>
+      <Link to='/about-pomodoro/' className={`${styles.footerContent} ${styles.linkPomodoro}`}>
         O que é a técnica de Pomodoro?
-      </a>
+      </Link>
+
       <p className={styles.footerContent}>
         &copy; {new Date().getFullYear()} - Chronos Pomodoro. Desenvolvido por{' '}
         <a

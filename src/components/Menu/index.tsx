@@ -8,6 +8,7 @@ import {
   MoonIcon,
 } from 'lucide-react';
 import styles from './styles.module.css';
+import { Link } from 'react-router';
 
 type AvailableThemes = 'dark' | 'light';
 
@@ -40,18 +41,15 @@ export function Menu() {
 
   return (
     <nav className={styles.menu}>
-      <a
+      <Link
         className={styles.menuLink}
-        href='#'
+        to='/'
         aria-label='Ir para a página inicial'
         title='Home'
-        onClick={e => {
-          e.preventDefault();
-          setHouseActive(!houseActive);
-        }}
+        onClick={() => setHouseActive(!houseActive)}
       >
-        {houseActive ? <HouseHeartIcon /> : <HouseIcon />}
-      </a>
+        {location.pathname === '/' ? <HouseIcon /> : <HouseHeartIcon />}
+      </Link>
 
       <a
         className={styles.menuLink}

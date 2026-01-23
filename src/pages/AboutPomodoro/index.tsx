@@ -1,3 +1,4 @@
+import { Link } from 'react-router';
 import { Container } from '../../components/Container';
 import { GenericHtml } from '../../components/GenericHtml';
 import { Heading } from '../../components/Heading';
@@ -18,7 +19,10 @@ export function AboutPomodoro() {
             garantir descansos para evitar o cansaço mental.
           </p>
 
-          <img src='https://placehold.co/1920x1080' alt='' />
+          <img
+            src='/images/Francesco-Cirillo.jpg'
+            alt='criador da técnica de Pomodoro, Francesco Cirillo!'
+          />
 
           <h2>Como funciona o Pomodoro tradicional?</h2>
           <ul>
@@ -50,8 +54,8 @@ export function AboutPomodoro() {
           <p>
             Você pode configurar o tempo de foco, descanso curto e descanso
             longo do jeito que quiser! Basta acessar a{' '}
-            <a href='/settings'>página de configurações</a> e ajustar os minutos
-            como preferir.
+            <Link to='/settings'>página de configurações</Link> e ajustar os
+            minutos como preferir.
           </p>
 
           <h3>🔁 Ciclos organizados em sequência</h3>
@@ -82,8 +86,8 @@ export function AboutPomodoro() {
             representando os ciclos:
           </p>
           <ul>
-            <li>🟡 Amarelo: Ciclo de trabalho (foco).</li>
-            <li>🟢 Verde: Descanso curto.</li>
+            <li>🟢 Verde: Ciclo de trabalho (foco).</li>
+            <li>🟡 Amarelo: Ciclo de descanso curto.</li>
             <li>🔵 Azul: Descanso longo (aparece a cada 8 ciclos).</li>
           </ul>
 
@@ -96,7 +100,7 @@ export function AboutPomodoro() {
           <h3>📊 Histórico automático</h3>
           <p>
             Todas as suas tarefas e ciclos concluídos ficam salvos no{' '}
-            <a href='/history'>histórico</a>, com status de completas ou
+            <Link to='/history'>histórico</Link>, com status de completas ou
             interrompidas. Assim, você consegue acompanhar sua evolução ao longo
             do tempo.
           </p>
@@ -111,7 +115,7 @@ export function AboutPomodoro() {
 
           <p>
             <strong>Pronto pra focar?</strong> Bora lá{' '}
-            <a href='/'>voltar para a página inicial</a> e iniciar seus
+            <Link to='/'>voltar para a página inicial</Link> e iniciar seus
             Pomodoros! 🍅🚀
           </p>
 
