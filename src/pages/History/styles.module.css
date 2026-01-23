@@ -1,0 +1,59 @@
+.buttonContainer button {
+  background-color: var(--error);
+  color: var(--gray-900);
+  box-shadow: 0 1rem #691443;
+  min-height: auto;
+  min-width: auto;
+  margin: 0;
+  width: 4rem;
+}
+
+.buttonContainer button svg {
+  height: 2rem;
+  width: 2rem;
+}
+
+.buttonContainer button:hover {
+  background-color: rgb(208, 87, 87);
+  color: var(--gray-900);
+  box-shadow: 0 1rem #833661;
+}
+
+.responsiveTable {
+  overflow-x: auto;
+  border-radius: 0.8rem;
+  max-width: 90vw;
+  margin: 0 auto;
+}
+
+.responsiveTable table {
+  width: 100%;
+  min-width: 64rem;
+  font-size: 1.6rem;
+  border-collapse: collapse;
+}
+
+.responsiveTable th {
+  background-color: var(--gray-600);
+}
+
+.responsiveTable td {
+  background-color: var(--gray-800);
+}
+
+.responsiveTable th,
+.responsiveTable td {
+  border-bottom: 0.2rem solid var(--gray-700);
+  text-align: left;
+  padding: 1.6rem;
+}
+
+.thSort {
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+}
+
+.thSort:hover {
+  transform: scale(1.02);
+  filter: brightness(1.5);
+}
