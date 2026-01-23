@@ -1,0 +1,12 @@
+.custom-toast {
+  margin-top: 1rem;
+  max-width: 80vw;
+  font-size: 1.4rem;
+}
+
+@media (max-width: 480px) {
+  .custom-toast {
+    font-size: 1.2rem;
+    padding: 0.8rem;
+  }
+}
