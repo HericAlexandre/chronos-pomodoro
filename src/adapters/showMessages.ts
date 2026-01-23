@@ -1,4 +1,5 @@
 import { toast, type ToastOptions } from 'react-toastify';
+import style from './styles.module.css';
 
 const defaultOptions: ToastOptions = {
   position: 'top-center',
@@ -8,6 +9,7 @@ const defaultOptions: ToastOptions = {
   pauseOnHover: false,
   draggable: true,
   progress: undefined,
+  className: style['custom-toast'],
 };
 
 export const showMessage = {
