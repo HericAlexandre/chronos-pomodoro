@@ -7,12 +7,16 @@ import { useTaskContext } from '../../contexts/TaskContext/useTaskContex';
 import { formatDate } from '../../utils/formatDate';
 import { getTaskStatus } from '../../utils/getTaskStatus';
 import { sortTasks, type SortTasksOptions } from '../../utils/sortTasks';
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 
 import styles from './styles.module.css';
 import { TaskActionTypes } from '../../contexts/TaskContext/taskActions';
 
 export function History() {
+  useEffect(() => {
+    document.title = 'Histórico - Chronos Pomodoro';
+  }, []);
+
   const { state, dispatch } = useTaskContext();
   const hasTasks = state.tasks.length > 0;
 
