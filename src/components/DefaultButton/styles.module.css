@@ -9,6 +9,9 @@
   cursor: pointer;
   transition: all 0.15s ease-in;
   box-shadow: 0 1rem #226fa2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .button:hover {
